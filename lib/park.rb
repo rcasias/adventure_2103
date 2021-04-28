@@ -25,4 +25,19 @@ class Park
     end
     result.round(2)
   end
+
+  def trails_by_level
+    trails_hash = @trails.each_with_object({}) do |trail, hash|
+      hash[trail.level] = []
+    end
+    trails_hash.each do |k,v|
+      @trails.each do |trail|
+        if trail.level == k
+          trails_hash[trail.level] << trail.name
+        end
+      end
+    end
+    trails_hash
+    # require'pry';binding.pry
+  end
 end

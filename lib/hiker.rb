@@ -31,4 +31,11 @@ class Hiker
     end
     array
   end
+
+  def favorite_snack
+    result = @snacks.max_by do |k, v|
+      v
+    end
+    result[0]
+  end
 end
