@@ -9,5 +9,20 @@ class Park
 
   def add_trail(trail)
     @trails << trail
-  end  
+  end
+
+  def trails_shorter_than(miles)
+    @trails.find_all do |trail|
+      trail_length_to_num = trail.length.chomp(" miles").to_f
+      trail_length_to_num < miles
+    end
+  end
+
+  def hikeable_miles
+    result = @trails.sum do |trail|
+      trail_length_to_num = trail.length.chomp(" miles").to_f
+      trail_length_to_num
+    end
+    result.round(2)
+  end
 end
