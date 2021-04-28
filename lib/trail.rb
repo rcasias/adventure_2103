@@ -1,3 +1,4 @@
+require 'time'
 class Trail
   attr_reader :name,
               :length,
@@ -6,5 +7,5 @@ class Trail
     @name = attributes[:name]
     @length = attributes[:length]
     @level = attributes[:level]
-  end              
+  end
 end

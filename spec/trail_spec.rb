@@ -1,4 +1,5 @@
 require "./lib/trail"
+require 'time'
 
 
 RSpec.describe 'Trail' do

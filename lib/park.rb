@@ -38,6 +38,5 @@ class Park
       end
     end
     trails_hash
-    # require'pry';binding.pry
   end
 end

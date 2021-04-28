@@ -23,7 +23,6 @@ class Hiker
     array = []
     @parks_visited.each do |park|
       park.trails.each do |trail|
-        # require'pry';binding.pry
         if trail.level == experience_level
           array << trail
         end
